@@ -10,16 +10,25 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var choice: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+        println("ok")
+        if let choice = self.choice{
+            switch choice {
+            case "rock": println("rock")
+            default: println("hai")
+            }
+            
+        }
     }
+    
     
 
     /*

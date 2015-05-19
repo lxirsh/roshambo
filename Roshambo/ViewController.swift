@@ -19,7 +19,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
+    @IBAction func rock(sender: AnyObject) {
+        
+        // Get the ResultViewController
+        var controller:ResultViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
+        
+        controller.choice = "rock"
+        
+        // Present the view Controller
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    
 }
 
