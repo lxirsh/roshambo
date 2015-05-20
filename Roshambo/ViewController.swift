@@ -36,7 +36,11 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! ResultViewController
         
-        controller.choice = "paper"
+        if segue.identifier == "paper" {
+            controller.choice = "paper"
+        } else if segue.identifier == "scissors" {
+            controller.choice = "scissors"
+        }
     }
     
     @IBAction func paper(sender: AnyObject) {

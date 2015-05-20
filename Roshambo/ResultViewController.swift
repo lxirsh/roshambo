@@ -25,6 +25,8 @@ class ResultViewController: UIViewController {
                 println("rock")
             case "paper":
                 println("paper")
+            case "scissors":
+                println("scissors")
             default: println("hai")
             }
             

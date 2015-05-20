@@ -24,6 +24,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="291" y="223" width="37" height="32"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="EHI-H2-Q7u" kind="presentation" identifier="scissors" id="qZT-iC-XtI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrz-1I-hAa">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -119,4 +122,7 @@
         <image name="rock" width="37" height="32"/>
         <image name="scissors" width="37" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qZT-iC-XtI"/>
+    </inferredMetricsTieBreakers>
 </document>
