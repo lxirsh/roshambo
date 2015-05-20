@@ -23,7 +23,15 @@ class ResultViewController: UIViewController {
         if let choice = self.choice{
             switch choice {
             case "rock":
-                println("rock")
+                if compChoice == "rock" {
+                    println("tie")
+                }
+                else if compChoice == "paper" {
+                    println("you lose")
+                }
+                else {
+                    println("you win")
+                }
             case "paper":
                 println("paper")
             case "scissors":
