@@ -20,6 +20,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func halsChoice() -> String {
+        let randomValue = 1 + arc4random() % 3
+        var hand = ""
+        
+        switch Int(randomValue) {
+        case 1:
+            hand = "rock"
+        case 2:
+            hand = "paper"
+        case 3:
+            hand = "scissors"
+        default: ()
+        }
+        return hand
+    }
     
     @IBAction func rock(sender: AnyObject) {
         
@@ -27,6 +42,7 @@ class ViewController: UIViewController {
         var controller:ResultViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
         
+        controller.compChoice = halsChoice()
         controller.choice = "rock"
         
         // Present the view Controller
@@ -35,6 +51,8 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! ResultViewController
+        
+        controller.compChoice = self.halsChoice()
         
         if segue.identifier == "paper" {
             controller.choice = "paper"

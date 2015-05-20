@@ -11,6 +11,7 @@ import UIKit
 class ResultViewController: UIViewController {
 
     var choice: String?
+    var compChoice: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
