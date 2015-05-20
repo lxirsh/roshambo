@@ -19,10 +19,12 @@ class ResultViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        println("ok")
         if let choice = self.choice{
             switch choice {
-            case "rock": println("rock")
+            case "rock":
+                println("rock")
+            case "paper":
+                println("paper")
             default: println("hai")
             }
             

@@ -45,6 +45,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="182" y="79" width="37" height="32"/>
                                 </variation>
+                                <connections>
+                                    <action selector="paper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5q8-4c-qSG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,6 +66,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="EHI-H2-Q7u" kind="presentation" identifier="paper" id="kYy-xx-SiQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gp-VO-l7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931.5" y="339"/>
+            <point key="canvasLocation" x="1033.5" y="344"/>
         </scene>
     </scenes>
     <resources>

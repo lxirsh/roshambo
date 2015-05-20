@@ -33,6 +33,16 @@ class ViewController: UIViewController {
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as! ResultViewController
+        
+        controller.choice = "paper"
+    }
+    
+    @IBAction func paper(sender: AnyObject) {
+        self.performSegueWithIdentifier("paper", sender: self)
+        
+    }
     
 }
 
