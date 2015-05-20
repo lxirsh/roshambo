@@ -101,19 +101,30 @@
                                     <action selector="dismiss:" destination="EHI-H2-Q7u" eventType="touchUpInside" id="jyX-QT-dTH"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3j2-Xv-OiW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="117" width="240" height="128"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="WCh-ah-VBd"/>
+                                <exclude reference="3j2-Xv-OiW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="WCh-ah-VBd"/>
+                                <include reference="3j2-Xv-OiW"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="result" destination="3j2-Xv-OiW" id="TJc-gG-wqX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gp-VO-l7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

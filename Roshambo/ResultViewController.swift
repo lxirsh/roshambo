@@ -13,6 +13,8 @@ class ResultViewController: UIViewController {
     var choice: String?
     var compChoice: String?
     
+    @IBOutlet weak var result: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,13 +26,13 @@ class ResultViewController: UIViewController {
             switch choice {
             case "rock":
                 if compChoice == "rock" {
-                    println("tie")
+                    self.result.image = UIImage(named: "itsATie")
                 }
                 else if compChoice == "paper" {
-                    println("you lose")
+                    self.result.image = UIImage(named: "PaperCoversRock")
                 }
                 else {
-                    println("you win")
+                    self.result.image = UIImage(named: "RockCrushesScissors")
                 }
             case "paper":
                 println("paper")
@@ -39,6 +41,14 @@ class ResultViewController: UIViewController {
             default: println("hai")
             }
             
+            self.result.alpha = 0
+            
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.3){
+            self.result.alpha = 1
         }
     }
     
