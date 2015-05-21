@@ -24,6 +24,9 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /* 
+        Decide the winner of the round
+    */
     override func viewWillAppear(animated: Bool) {
         if let choice = self.choice{
             switch choice {

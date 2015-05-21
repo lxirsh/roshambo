@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+        Chose a random hand sign
+    */
     func halsChoice() -> String {
         let randomValue = 1 + arc4random() % 3
         var hand = ""
@@ -36,6 +39,7 @@ class ViewController: UIViewController {
         return hand
     }
     
+    // Programatic segue
     @IBAction func rock(sender: AnyObject) {
         
         // Get the ResultViewController
@@ -49,6 +53,7 @@ class ViewController: UIViewController {
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
+    // Prepare for paper and scissor segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! ResultViewController
         
@@ -61,6 +66,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // Code for paper segue
     @IBAction func paper(sender: AnyObject) {
         self.performSegueWithIdentifier("paper", sender: self)
         
