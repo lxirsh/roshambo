@@ -86,6 +86,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5Mj-kK-ovA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pdl-Tr-Bhj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCh-ah-VBd">
@@ -101,10 +102,19 @@
                                     <action selector="dismiss:" destination="EHI-H2-Q7u" eventType="touchUpInside" id="jyX-QT-dTH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33t-Jl-xPd">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="81" y="268" width="250" height="35"/>
+                                </variation>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3j2-Xv-OiW">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="117" width="240" height="128"/>
+                                    <rect key="frame" x="80" y="108" width="240" height="128"/>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -112,18 +122,21 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="WCh-ah-VBd"/>
+                                <exclude reference="33t-Jl-xPd"/>
                                 <exclude reference="3j2-Xv-OiW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="WCh-ah-VBd"/>
+                                <include reference="33t-Jl-xPd"/>
                                 <include reference="3j2-Xv-OiW"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="result" destination="3j2-Xv-OiW" id="TJc-gG-wqX"/>
+                        <outlet property="resultLabel" destination="33t-Jl-xPd" id="BVw-z5-g1y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gp-VO-l7d" userLabel="First Responder" sceneMemberID="firstResponder"/>

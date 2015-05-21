@@ -15,6 +15,9 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var result: UIImageView!
     
+    @IBOutlet weak var resultLabel: UILabel!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,29 +30,56 @@ class ResultViewController: UIViewController {
             case "rock":
                 if compChoice == "rock" {
                     self.result.image = UIImage(named: "itsATie")
+                    self.resultLabel.text = "It's a tie!"
                 }
                 else if compChoice == "paper" {
                     self.result.image = UIImage(named: "PaperCoversRock")
+                    self.resultLabel.text = "You lose!"
                 }
                 else {
                     self.result.image = UIImage(named: "RockCrushesScissors")
+                    self.resultLabel.text = "You win!"
                 }
             case "paper":
-                println("paper")
+                if compChoice == "paper" {
+                    self.result.image = UIImage(named: "itsATie")
+                    self.resultLabel.text = "It's a tie!"
+                }
+                else if compChoice == "scissors" {
+                    self.result.image = UIImage(named: "ScissorsCutPaper")
+                    self.resultLabel.text = "You lose!"
+                }
+                else {
+                    self.result.image = UIImage(named: "PaperCoversRock")
+                    self.resultLabel.text = "You win!"
+                }
             case "scissors":
-                println("scissors")
-            default: println("hai")
+                if compChoice == "scissors" {
+                    self.result.image = UIImage(named: "itsATie")
+                }
+                else if compChoice == "rock" {
+                    self.result.image = UIImage(named: "RockCrushesScissors")
+                    self.resultLabel.text = "You lose!"
+                }
+                else {
+                    self.result.image = UIImage(named: "ScissorsCutPaper")
+                    self.resultLabel.text = "You win!"
+                }
+                
+            default: ()
             }
             
             self.result.alpha = 0
-            
+            resultLabel.font = UIFont.systemFontOfSize(22)
+            self.resultLabel.alpha = 0
         }
     }
     
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(0.3){
             self.result.alpha = 1
-        }
+            self.resultLabel.alpha = 1
+                    }
     }
     
     
